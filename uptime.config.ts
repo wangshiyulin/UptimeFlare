@@ -22,7 +22,7 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'github_monitor',
       // `name` is used at status page and callback message
       name: 'My Github Monitor',
       // `method` should be a valid HTTP Method
@@ -68,10 +68,28 @@ const workerConfig: WorkerConfig = {
     //   timeout: 5000,
     // },
     {
-      id: 'bar_monitor',
+      id: 'blog_monitor',
       name: 'My Blog Monitor',
       method: 'GET',
       target: 'https://qingluanx.com/',
+      tooltip: 'This is a tooltip for this monitor',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://status.qingluanx.com',
+    },
+    {
+      id: 'tg_monitor',
+      name: 'My Telegram Monitor',
+      method: 'GET',
+      target: 'https://t.me/yuqing_ren/',
+      tooltip: 'This is a tooltip for this monitor',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://status.qingluanx.com',
+    },
+    {
+      id: 'x_monitor',
+      name: 'My X Monitor',
+      method: 'GET',
+      target: 'https://x.com/wangshi_yu/',
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://status.qingluanx.com',
