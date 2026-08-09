@@ -12,8 +12,7 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://github.com/wangshiyulin', label: 'GitHub' },
     { link: 'https://qingluanx.com/', label: 'Blog', highlight: true  },
-    { link: 'mailto:kurong3007@gmail.com', label: 'Email Me'},
-  ],
+  ]
 }
 
 const workerConfig: WorkerConfig = {
@@ -22,13 +21,13 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'qingluanx.com',
+      id: 'google_monitor',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'My Github Monitor',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://qingluanx.com',
+      target: 'https://github.com/wangshiyulin',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
@@ -56,17 +55,26 @@ const workerConfig: WorkerConfig = {
       // checkProxyFallback: true,
     },
     // Example TCP Monitor
+    // {
+    //   id: 'test_tcp_monitor',
+    //   name: 'Example TCP Monitor',
+    //   // `method` should be `TCP_PING` for tcp monitors
+    //   method: 'TCP_PING',
+    //   // `target` should be `host:port` for tcp monitors
+    //   target: '1.2.3.4:22',
+    //   tooltip: 'My production server SSH',
+    //   statusPageLink: 'https://status.qingluanx.com',
+    //   timeout: 5000,
+    // },
     {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
+      id: 'google_monitor',
+      name: 'My Blog Monitor',
+      method: 'GET',
+      target: 'https://qingluanx.com/',
+      tooltip: 'This is a tooltip for this monitor',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://status.qingluanx.com',
-      timeout: 5000,
-    },
+    }
   ],
   // [Optional] Notification settings
   notification: {
