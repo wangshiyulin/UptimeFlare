@@ -21,7 +21,7 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'google_monitor',
+      id: 'foo_monitor',
       // `name` is used at status page and callback message
       name: 'My Github Monitor',
       // `method` should be a valid HTTP Method
@@ -67,7 +67,7 @@ const workerConfig: WorkerConfig = {
     //   timeout: 5000,
     // },
     {
-      id: 'google_monitor',
+      id: 'bar_monitor',
       name: 'My Blog Monitor',
       method: 'GET',
       target: 'https://qingluanx.com/',
