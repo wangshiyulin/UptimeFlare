@@ -76,24 +76,6 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://status.qingluanx.com',
     },
-    {
-      id: 'tg_monitor',
-      name: 'My Telegram Monitor',
-      method: 'GET',
-      target: 'https://t.me/yuqing_ren/',
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://status.qingluanx.com',
-    },
-    {
-      id: 'x_monitor',
-      name: 'My X Monitor',
-      method: 'GET',
-      target: 'https://x.com/wangshi_yu/',
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://status.qingluanx.com',
-    }
   ],
   // [Optional] Notification settings
   notification: {
@@ -117,7 +99,7 @@ const workerConfig: WorkerConfig = {
       // [Required] payload to be sent
       // $MSG will be replaced with the human-readable notification message
       payload: {
-        chat_id: 12345678,
+        chat_id: ,
         text: '$MSG',
       },
       // [Optional] timeout calling this webhook, in millisecond, default to 5000
